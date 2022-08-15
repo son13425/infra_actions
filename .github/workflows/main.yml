@@ -77,4 +77,4 @@ jobs:
           sudo docker pull son134/infra_actions:v1.08.2022
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 son134/infra_actions
+          sudo docker run --rm -d -p 5000:5000 son134/infra_actions:v1.08.2022
