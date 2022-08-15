@@ -82,9 +82,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-    - name: send message
-      uses: appleboy/telegram-action@master
+    - name: slack-send
+      uses: slackapi/slack-github-action@v1.21.0
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} успешно выполнен!
+        channel-id: ${{ secrets.SLACK_TO }}
+        slack-message: ${{ github.workflow }} успешно выполнен!
